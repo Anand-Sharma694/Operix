@@ -1,0 +1,149 @@
+.summary {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.summaryBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 28px;
+  border-radius: 12px;
+  border: 1px solid;
+  min-width: 110px;
+  transition: border-color 0.15s;
+}
+
+.summaryHigh { background: var(--danger-dim);  border-color: rgba(220,38,38,0.25); }
+.summaryMed  { background: var(--warning-dim); border-color: rgba(217,119,6,0.25); }
+.summaryAll  { background: var(--bg-card);     border-color: var(--border); box-shadow: 0 1px 2px rgba(15,21,35,0.04); }
+
+.summaryNum {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.summaryHigh .summaryNum { color: #b91c1c; }
+.summaryMed .summaryNum  { color: #b45309; }
+
+.summaryLbl {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  margin-top: 5px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.filterBar {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.fBtn {
+  padding: 6px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.fBtn:hover { background: var(--bg-elevated); color: var(--text-secondary); border-color: var(--border-light); }
+.fBtn.active {
+  background: var(--accent-dim);
+  border-color: rgba(59,130,246,0.35);
+  color: #60a5fa;
+}
+
+.riskList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.riskCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  border-left: 4px solid var(--border);
+  transition: border-color 0.15s;
+}
+.riskCard:hover { border-color: var(--border-light); }
+
+.risk_high   { border-left-color: #ef4444; }
+.risk_medium { border-left-color: #f59e0b; }
+.risk_low    { border-left-color: #10b981; }
+
+.riskHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.riskLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.riskType {
+  font-size: 11.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+}
+
+.riskTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+  letter-spacing: -0.2px;
+}
+
+.riskReason {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 14px;
+}
+
+.riskAction {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 11px 14px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.actionLabel {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  margin-top: 1px;
+}
+
+.actionText {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
