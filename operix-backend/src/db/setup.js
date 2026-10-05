@@ -8,10 +8,12 @@ async function setup() {
     const schema = fs.readFileSync(path.join(__dirname, 'schema.sql'), 'utf8');
     await db.query(schema);
     console.log('Database schema created successfully');
-    process.exit(0);
+    // Do NOT call process.exit() — allows chaining with && in start command
   } catch (err) {
     console.error('Failed to set up database:', err.message);
-    process.exit(1);
+    process.exit(1); // Only exit on real failure
+  } finally {
+    await db.pool.end(); // Close pool so next process can start fresh
   }
 }
 
