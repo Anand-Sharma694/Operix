@@ -29,6 +29,7 @@ app.use(cors({
     'http://localhost:5173',
     'http://localhost:5174',
     'http://localhost:5175',
+    'https://operix-vert.vercel.app',
     'https://operix-dk6rx5inw-sharmanand.vercel.app',
     /\.vercel\.app$/,
   ],
